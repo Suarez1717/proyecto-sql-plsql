@@ -1,0 +1,8 @@
+-- Productos con bajo stock
+CREATE OR REPLACE VIEW Vista_Productos_StockBajo AS
+SELECT * FROM PRODUCTOS WHERE stock < 5;
+
+-- Ventas con nombre del producto
+CREATE OR REPLACE VIEW Vista_Ventas_Detalle AS
+SELECT v.id_venta, p.nombre AS producto, v.cantidad, v.fecha
+FROM VENTAS v JOIN PRODUCTOS p ON v.id_producto = p.id_producto;
