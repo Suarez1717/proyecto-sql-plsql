@@ -1,0 +1,5 @@
+CREATE OR REPLACE PACKAGE pkg_utils AS
+  FUNCTION to_money(p_monto IN NUMBER) RETURN VARCHAR2;
+  FUNCTION titlecase(p_txt IN VARCHAR2) RETURN VARCHAR2;
+END pkg_utils;
+/

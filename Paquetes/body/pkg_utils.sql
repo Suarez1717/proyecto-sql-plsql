@@ -1,0 +1,7 @@
+CREATE OR REPLACE PACKAGE BODY pkg_utils AS
+  FUNCTION to_money(p_monto IN NUMBER) RETURN VARCHAR2 IS
+  BEGIN RETURN fn_formatear_moneda(p_monto); END;
+  FUNCTION titlecase(p_txt IN VARCHAR2) RETURN VARCHAR2 IS
+  BEGIN RETURN INITCAP(LOWER(p_txt)); END;
+END pkg_utils;
+/
