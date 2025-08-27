@@ -1,0 +1,5 @@
+CREATE OR REPLACE PROCEDURE cur_listar_productos(p_rc OUT SYS_REFCURSOR) AS
+BEGIN
+  OPEN p_rc FOR SELECT * FROM productos;
+END;
+/

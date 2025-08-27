@@ -4,5 +4,3 @@ BEGIN
     SELECT * FROM productos WHERE UPPER(nombre) LIKE '%'||UPPER(p_nombre)||'%';
 END;
 /
-
-
