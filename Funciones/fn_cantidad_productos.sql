@@ -1,0 +1,7 @@
+CREATE OR REPLACE FUNCTION fn_cantidad_productos RETURN NUMBER IS
+  v NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v FROM productos;
+  RETURN v;
+END;
+/

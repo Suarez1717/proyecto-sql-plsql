@@ -1,0 +1,7 @@
+CREATE OR REPLACE FUNCTION fn_stock_producto(p_id IN NUMBER) RETURN NUMBER IS
+  v_stock NUMBER;
+BEGIN
+  SELECT stock INTO v_stock FROM productos WHERE id = p_id;
+  RETURN v_stock;
+EXCEPTION WHEN NO_DATA_FOUND THEN RETURN NULL; END;
+/

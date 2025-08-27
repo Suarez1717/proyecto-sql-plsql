@@ -1,0 +1,7 @@
+CREATE OR REPLACE FUNCTION fn_producto_existe(p_nombre IN VARCHAR2) RETURN CHAR IS
+  v NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v FROM productos WHERE UPPER(nombre)=UPPER(p_nombre);
+  RETURN CASE WHEN v>0 THEN 'S' ELSE 'N' END;
+END;
+/
